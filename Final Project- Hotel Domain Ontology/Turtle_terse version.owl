@@ -1,0 +1,1092 @@
+@prefix : <http://www.hotels.com/ontologies/hotel_domain.owl> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.hotels.com/ontologies/hotel_domain.owl> .
+
+<http://www.hotels.com/ontologies/hotel_domain.owl> rdf:type owl:Ontology ;
+                                                     rdfs:comment "This hotel domain ontology describes various types of hotels with its attributes"^^rdfs:Literal .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasDepartment
+:hasDepartment rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasSubCategory ;
+               owl:inverseOf :isDepartmentOf ;
+               rdfs:domain :Hotel ;
+               rdfs:range :Department .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasFacility
+:hasFacility rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasSubCategory ;
+             owl:inverseOf :isFacilityOf ;
+             rdf:type owl:InverseFunctionalProperty ;
+             rdfs:domain :Hotel ;
+             rdfs:range :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasGuestRoom
+:hasGuestRoom rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasSubCategory ;
+              owl:inverseOf :isGuestRoomOf ;
+              rdfs:domain :Hotel ;
+              rdfs:range :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasService
+:hasService rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasSubCategory ;
+            owl:inverseOf :isServiceOf ;
+            rdfs:domain :Hotel ;
+            rdfs:range :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasStaffMember
+:hasStaffMember rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasSubCategory ;
+                owl:inverseOf :isStaffMemberOf ;
+                rdfs:domain :Hotel ;
+                rdfs:range :StaffMember .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#hasSubCategory
+:hasSubCategory rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isSubCategoryOf .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isDepartmentOf
+:isDepartmentOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :isSubCategoryOf ;
+                rdfs:domain :Department ;
+                rdfs:range :Hotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isFacilityOf
+:isFacilityOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :isSubCategoryOf ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Facility ;
+              rdfs:range :Hotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isGuestRoomOf
+:isGuestRoomOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :isSubCategoryOf ;
+               rdfs:domain :GuestRoom ;
+               rdfs:range :Hotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isServiceOf
+:isServiceOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isSubCategoryOf ;
+             rdfs:domain :Service ;
+             rdfs:range :Hotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isStaffMemberOf
+:isStaffMemberOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isSubCategoryOf ;
+                 rdfs:domain :StaffMember ;
+                 rdfs:range :Hotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#isSubCategoryOf
+:isSubCategoryOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#worksAt
+:worksAt rdf:type owl:ObjectProperty ;
+         rdfs:domain :StaffMember ;
+         rdfs:range :Department .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#numberOfRooms
+:numberOfRooms rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :SizeBasedHotel ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#role
+:role rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :StaffMember ;
+      rdfs:range xsd:string .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#starRate
+:starRate rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :StarBasedHotel ;
+          rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#AccountsManager
+:AccountsManager rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :role ;
+                                                              owl:hasValue "AccountsManager"
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#AdjoiningRoom
+:AdjoiningRoom rdf:type owl:Class ;
+               rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Advertising
+:Advertising rdf:type owl:Class ;
+             rdfs:subClassOf :SalesAndMarketingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#AirportLocation
+:AirportLocation rdf:type owl:Class ;
+                 rdfs:subClassOf :LocationBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#AssistenceManager
+:AssistenceManager rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :role ;
+                                                                owl:hasValue "AssistanceManager"
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Bakery
+:Bakery rdf:type owl:Class ;
+        rdfs:subClassOf :FoodAndBeveragesDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#BanquetFacility
+:BanquetFacility rdf:type owl:Class ;
+                 rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#BarFacility
+:BarFacility rdf:type owl:Class ;
+             rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Bars
+:Bars rdf:type owl:Class ;
+      rdfs:subClassOf :FoodAndBeveragesDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#BedAndBreakfastClientele
+:BedAndBreakfastClientele rdf:type owl:Class ;
+                          rdfs:subClassOf :ClienteleBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Billing
+:Billing rdf:type owl:Class ;
+         rdfs:subClassOf :FinancialControlDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#BusinessAndCommercialClientele
+:BusinessAndCommercialClientele rdf:type owl:Class ;
+                                rdfs:subClassOf :ClienteleBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CabanaRoom
+:CabanaRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CarRental
+:CarRental rdf:type owl:Class ;
+           rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CasinoClientele
+:CasinoClientele rdf:type owl:Class ;
+                 rdfs:subClassOf :ClienteleBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CateringService
+:CateringService rdf:type owl:Class ;
+                 rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Chef
+:Chef rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :role ;
+                                                   owl:hasValue "Chef"
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ChiefManager
+:ChiefManager rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :role ;
+                                                           owl:hasValue "ChiefManager"
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CleaningStaff
+:CleaningStaff rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :role ;
+                                                            owl:hasValue "CleaningManager"
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ClienteleBasedHotel
+:ClienteleBasedHotel rdf:type owl:Class ;
+                     rdfs:subClassOf :Hotel ;
+                     rdfs:comment "The hotel can be classified into the following categories on the basis of its clients"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Coffeeshops
+:Coffeeshops rdf:type owl:Class ;
+             rdfs:subClassOf :FoodAndBeveragesDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CollectingPayments
+:CollectingPayments rdf:type owl:Class ;
+                    rdfs:subClassOf :FinancialControlDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ComputerFacility
+:ComputerFacility rdf:type owl:Class ;
+                  rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ConferenceAndMeetingFacility
+:ConferenceAndMeetingFacility rdf:type owl:Class ;
+                              rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ConferenceCenterClientele
+:ConferenceCenterClientele rdf:type owl:Class ;
+                           rdfs:subClassOf :ClienteleBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Department
+:Department rdf:type owl:Class ;
+            rdfs:comment "Hotel has several departments function, to coordinate and interact for a smooth day to day operations."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#DocterOnCall
+:DocterOnCall rdf:type owl:Class ;
+              rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#DoubleRoom
+:DoubleRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#DowntownLocation
+:DowntownLocation rdf:type owl:Class ;
+                  rdfs:subClassOf :LocationBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#DuplexRoom
+:DuplexRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#EmployeeWelfare
+:EmployeeWelfare rdf:type owl:Class ;
+                 rdfs:subClassOf :HRAndTrainingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Engineering
+:Engineering rdf:type owl:Class ;
+             rdfs:subClassOf :RoomsDivisionDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ExecutiveHouseKeeper
+:ExecutiveHouseKeeper rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :role ;
+                                                                   owl:hasValue "ExecutiveHouseKeeper"
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Facility
+:Facility rdf:type owl:Class ;
+          rdfs:comment "Facilities are buildings, pieces of equipment, that are provided for a particular purpose."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FamilyRoom
+:FamilyRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FamilyRoomWithBalcony
+:FamilyRoomWithBalcony rdf:type owl:Class ;
+                       rdfs:subClassOf :FamilyRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FamilySuitWithSeaVIew
+:FamilySuitWithSeaVIew rdf:type owl:Class ;
+                       rdfs:subClassOf :FamilyRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FinancialControlDepartment
+:FinancialControlDepartment rdf:type owl:Class ;
+                            rdfs:subClassOf :Department ;
+                            rdfs:comment "It is also called the control department, the financial control department is headed by the financial controller, who is responsible for ratifying all the inventory items of the operational departments."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FinancialStatements
+:FinancialStatements rdf:type owl:Class ;
+                     rdfs:subClassOf :FinancialControlDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FiveStar
+:FiveStar rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :StarBasedHotel
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :starRate ;
+                                                       owl:hasValue 5
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FlotelLocation
+:FlotelLocation rdf:type owl:Class ;
+                rdfs:subClassOf :LocationBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FoodAndBeragerManager
+:FoodAndBeragerManager rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :role ;
+                                                                    owl:hasValue "FoodAndBeverageManager"
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FoodAndBeveragesDepartment
+:FoodAndBeveragesDepartment rdf:type owl:Class ;
+                            rdfs:subClassOf :Department ;
+                            rdfs:comment "The food and beverage (F&B) department include restaurants, bars, coffee shops, banquets, room service, kitchen, and bakery. The department is headed by the F&B director"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FourStar
+:FourStar rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :StarBasedHotel
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :starRate ;
+                                                       owl:hasValue 4
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FranchiseOwnership
+:FranchiseOwnership rdf:type owl:Class ;
+                    rdfs:subClassOf :OwnershipBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FrontOffice
+:FrontOffice rdf:type owl:Class ;
+             rdfs:subClassOf :RoomsDivisionDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#FrontOfficeManager
+:FrontOfficeManager rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :role ;
+                                                                 owl:hasValue "FrontOfficeManager"
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#GeneralManager
+:GeneralManager rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :role ;
+                                                             owl:hasValue "GeneralManager"
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#GuestRoom
+:GuestRoom rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :isGuestRoomOf ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Hotel
+                           ] ;
+           rdfs:comment "A hotel sells a combination of accommodation, food, drinks, and other services and facilities to its guests. The main accommodation product is the room, which is among the principal source for the hotel."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#HRAndTrainingDepartment
+:HRAndTrainingDepartment rdf:type owl:Class ;
+                         rdfs:subClassOf :Department ;
+                         rdfs:comment "The human resource (HR) department or the personnel department, as it used to be called earlier – is headed by the human resource manager"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#HealthClubFacility
+:HealthClubFacility rdf:type owl:Class ;
+                    rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#HospitilityRoom
+:HospitilityRoom rdf:type owl:Class ;
+                 rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:comment "The place an establishment providing accommodation, meals, and other services for travellers and tourists."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#HouseKeeping
+:HouseKeeping rdf:type owl:Class ;
+              rdfs:subClassOf :RoomsDivisionDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#IndependentOwnership
+:IndependentOwnership rdf:type owl:Class ;
+                      rdfs:subClassOf :OwnershipBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#InternetFacility
+:InternetFacility rdf:type owl:Class ;
+                  rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#InventoryControl
+:InventoryControl rdf:type owl:Class ;
+                  rdfs:subClassOf :FinancialControlDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Invoices
+:Invoices rdf:type owl:Class ;
+          rdfs:subClassOf :FinancialControlDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#IroningService
+:IroningService rdf:type owl:Class ;
+                rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Kitchen
+:Kitchen rdf:type owl:Class ;
+         rdfs:subClassOf :FoodAndBeveragesDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Labourer
+:Labourer rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :role ;
+                                                       owl:hasValue "Labourer"
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#LargeSize
+:LargeSize rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :SizeBasedHotel
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :numberOfRooms ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                    owl:onDatatype xsd:integer ;
+                                                                                                    owl:withRestrictions ( [ xsd:minExclusive 250
+                                                                                                                           ]
+                                                                                                                         )
+                                                                                                  ]
+                                                                                                  [ rdf:type rdfs:Datatype ;
+                                                                                                    owl:onDatatype xsd:integer ;
+                                                                                                    owl:withRestrictions ( [ xsd:maxInclusive 500
+                                                                                                                           ]
+                                                                                                                         )
+                                                                                                  ]
+                                                                                                )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#LaundryService
+:LaundryService rdf:type owl:Class ;
+                rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#LocationBasedHotel
+:LocationBasedHotel rdf:type owl:Class ;
+                    rdfs:subClassOf :Hotel ;
+                    rdfs:comment "The location of the hotel is one of the major criteria for the traveler to select and patronize a hotel"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#LuggageStorageFacility
+:LuggageStorageFacility rdf:type owl:Class ;
+                        rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#MailService
+:MailService rdf:type owl:Class ;
+             rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Maintainance
+:Maintainance rdf:type owl:Class ;
+              rdfs:subClassOf :RoomsDivisionDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ManagementContractOwnership
+:ManagementContractOwnership rdf:type owl:Class ;
+                             rdfs:subClassOf :OwnershipBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#MediumSize
+:MediumSize rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :SizeBasedHotel
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :numberOfRooms ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                     owl:onDatatype xsd:integer ;
+                                                                                                     owl:withRestrictions ( [ xsd:minInclusive 100
+                                                                                                                            ]
+                                                                                                                          )
+                                                                                                   ]
+                                                                                                   [ rdf:type rdfs:Datatype ;
+                                                                                                     owl:onDatatype xsd:integer ;
+                                                                                                     owl:withRestrictions ( [ xsd:maxInclusive 250
+                                                                                                                            ]
+                                                                                                                          )
+                                                                                                   ]
+                                                                                                 )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#OneStar
+:OneStar rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :StarBasedHotel
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :starRate ;
+                                                      owl:hasValue 1
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Orientation
+:Orientation rdf:type owl:Class ;
+             rdfs:subClassOf :HRAndTrainingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Owner
+:Owner rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :role ;
+                                                    owl:hasValue "Owner"
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#OwnershipBasedHotel
+:OwnershipBasedHotel rdf:type owl:Class ;
+                     rdfs:subClassOf :Hotel ;
+                     rdfs:comment "On the basis of ownership of a hotel, they may be classified"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ParkingFacility
+:ParkingFacility rdf:type owl:Class ;
+                 rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#PersonalRelations
+:PersonalRelations rdf:type owl:Class ;
+                   rdfs:subClassOf :SalesAndMarketingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Procurement
+:Procurement rdf:type owl:Class ;
+             rdfs:subClassOf :PurchaseDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ProprietaryOwnership
+:ProprietaryOwnership rdf:type owl:Class ;
+                      rdfs:subClassOf :OwnershipBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#PurchaseDepartment
+:PurchaseDepartment rdf:type owl:Class ;
+                    rdfs:subClassOf :Department ;
+                    rdfs:comment "The purchasing department is led by the purchase manager, who, in some properties, may report to the financial controller."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Recruitment
+:Recruitment rdf:type owl:Class ;
+             rdfs:subClassOf :HRAndTrainingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ResidentialClientele
+:ResidentialClientele rdf:type owl:Class ;
+                      rdfs:subClassOf :ClienteleBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ResortLocation
+:ResortLocation rdf:type owl:Class ;
+                rdfs:subClassOf :LocationBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Resturants
+:Resturants rdf:type owl:Class ;
+            rdfs:subClassOf :FoodAndBeveragesDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ResurantFacility
+:ResurantFacility rdf:type owl:Class ;
+                  rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#RoomService
+:RoomService rdf:type owl:Class ;
+             rdfs:subClassOf :Service .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#RoomsDivisionDepartment
+:RoomsDivisionDepartment rdf:type owl:Class ;
+                         rdfs:subClassOf :Department ;
+                         rdfs:comment "In a large hotel, the housekeeping, front office, and maintenance departments come under room division. These departments together are responsible for maintaining and selling the room in a hotel."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Sales
+:Sales rdf:type owl:Class ;
+       rdfs:subClassOf :SalesAndMarketingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SalesAndMarketingDepartment
+:SalesAndMarketingDepartment rdf:type owl:Class ;
+                             rdfs:subClassOf :Department ;
+                             rdfs:comment "The sales and marketing department is headed by the sales and marketing manager. A large hotel may have three or more employees in this department, whereas a small hotel can do with just one employee."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SalesAndMarketingManager
+:SalesAndMarketingManager rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :role ;
+                                                                       owl:hasValue "SalesAndMarketingManager"
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SecurityDepartment
+:SecurityDepartment rdf:type owl:Class ;
+                    rdfs:subClassOf :Department ;
+                    rdfs:comment "It is headed by the chief security officers, the security department is responsible for safeguarding the assets, guests, and employees of the hotel."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Service
+:Service rdf:type owl:Class ;
+         rdfs:comment "Hotel services, their number and the amount of people engaged in them depends on the size of the hotel as well as on its status."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SingleRoom
+:SingleRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SizeBasedHotel
+:SizeBasedHotel rdf:type owl:Class ;
+                rdfs:subClassOf :Hotel ;
+                rdfs:comment "The number of guest rooms in a hotel is a criterion to classify hotels. Hotels can be grouped into the following categories on the basis of the number of rooms or the size of the hotel"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SmallSize
+:SmallSize rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :SizeBasedHotel
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :numberOfRooms ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                    owl:onDatatype xsd:integer ;
+                                                                                                    owl:withRestrictions ( [ xsd:minExclusive 0
+                                                                                                                           ]
+                                                                                                                         )
+                                                                                                  ]
+                                                                                                  [ rdf:type rdfs:Datatype ;
+                                                                                                    owl:onDatatype xsd:integer ;
+                                                                                                    owl:withRestrictions ( [ xsd:maxExclusive 100
+                                                                                                                           ]
+                                                                                                                         )
+                                                                                                  ]
+                                                                                                )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#StaffMember
+:StaffMember rdf:type owl:Class ;
+             rdfs:comment "IT means company’s distribution of responsibilities and authority among its management staff and employees"^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#StarBasedHotel
+:StarBasedHotel rdf:type owl:Class ;
+                rdfs:subClassOf :Hotel ;
+                rdfs:comment "The star classification system is among the most widely accepted rating of hotels worldwide. Rating of hotels in different countries is done by the government or quasi-government sources, independent rating agencies, or sometimes the hotel operators themselves."^^rdfs:Literal .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#StudioRoom
+:StudioRoom rdf:type owl:Class ;
+            rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SubUrbanLocation
+:SubUrbanLocation rdf:type owl:Class ;
+                  rdfs:subClassOf :LocationBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Suits
+:Suits rdf:type owl:Class ;
+       rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Supervisor
+:Supervisor rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :StaffMember
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :role ;
+                                                         owl:hasValue "Supervisor"
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SwimmingPoolFacility
+:SwimmingPoolFacility rdf:type owl:Class ;
+                      rdfs:subClassOf :Facility .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#ThreeStar
+:ThreeStar rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :StarBasedHotel
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :starRate ;
+                                                        owl:hasValue 3
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#TimeShareOwnership
+:TimeShareOwnership rdf:type owl:Class ;
+                    rdfs:subClassOf :OwnershipBasedHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#Training
+:Training rdf:type owl:Class ;
+          rdfs:subClassOf :HRAndTrainingDepartment .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#TwinRoom
+:TwinRoom rdf:type owl:Class ;
+          rdfs:subClassOf :GuestRoom .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#TwoStar
+:TwoStar rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :StarBasedHotel
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :starRate ;
+                                                      owl:hasValue 2
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#VeryLargeSize
+:VeryLargeSize rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :SizeBasedHotel
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :numberOfRooms ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:minExclusive 500
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#CinnamonRedColombo
+:CinnamonRedColombo rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :numberOfRooms 200 ;
+                    :starRate 4 .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#GaladariHotel
+:GaladariHotel rdf:type owl:NamedIndividual ,
+                        :Hotel ;
+               :numberOfRooms 500 ;
+               :starRate 5 .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#GaladariHotelFoodAndBeverageDepartment
+:GaladariHotelFoodAndBeverageDepartment rdf:type owl:NamedIndividual ,
+                                                 :FoodAndBeveragesDepartment ;
+                                        :isDepartmentOf :GaladariHotel .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#KamalPrasad
+:KamalPrasad rdf:type owl:NamedIndividual ,
+                      :StaffMember ;
+             :isStaffMemberOf :GaladariHotel ;
+             :worksAt :GaladariHotelFoodAndBeverageDepartment ;
+             :role "Chef" .
+
+
+###  http://www.hotels.com/ontologies/hotel_domain.owl#SamanRathnayake
+:SamanRathnayake rdf:type owl:NamedIndividual ,
+                          :StaffMember ;
+                 :isStaffMemberOf :GaladariHotel ;
+                 :role "Owner" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:comment "Hotel Domain Ontology"^^rdfs:Literal .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AccountsManager
+                :AssistenceManager
+                :Chef
+                :ChiefManager
+                :CleaningStaff
+                :ExecutiveHouseKeeper
+                :FoodAndBeragerManager
+                :FrontOfficeManager
+                :GeneralManager
+                :Labourer
+                :SalesAndMarketingManager
+                :Supervisor
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AdjoiningRoom
+                :CabanaRoom
+                :DoubleRoom
+                :DuplexRoom
+                :FamilyRoom
+                :HospitilityRoom
+                :SingleRoom
+                :StudioRoom
+                :Suits
+                :TwinRoom
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Advertising
+                :PersonalRelations
+                :Sales
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AirportLocation
+                :DowntownLocation
+                :FlotelLocation
+                :ResortLocation
+                :SubUrbanLocation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bakery
+                :Bars
+                :Coffeeshops
+                :Kitchen
+                :Resturants
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BanquetFacility
+                :BarFacility
+                :ComputerFacility
+                :ConferenceAndMeetingFacility
+                :HealthClubFacility
+                :InternetFacility
+                :LuggageStorageFacility
+                :ParkingFacility
+                :ResurantFacility
+                :SwimmingPoolFacility
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Billing
+                :CollectingPayments
+                :FinancialStatements
+                :InventoryControl
+                :Invoices
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CarRental
+                :CateringService
+                :DocterOnCall
+                :IroningService
+                :LaundryService
+                :MailService
+                :RoomService
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Department
+                :Facility
+                :GuestRoom
+                :Hotel
+                :Service
+                :StaffMember
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EmployeeWelfare
+                :Orientation
+                :Recruitment
+                :Training
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Engineering
+                :FrontOffice
+                :HouseKeeping
+                :Maintainance
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :FinancialControlDepartment
+                :FoodAndBeveragesDepartment
+                :HRAndTrainingDepartment
+                :PurchaseDepartment
+                :RoomsDivisionDepartment
+                :SalesAndMarketingDepartment
+                :SecurityDepartment
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :FranchiseOwnership
+                :IndependentOwnership
+                :ManagementContractOwnership
+                :ProprietaryOwnership
+                :TimeShareOwnership
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LargeSize
+                :MediumSize
+                :SmallSize
+                :VeryLargeSize
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
