@@ -1,0 +1,1459 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.hotels.com/ontologies/hotel_domain.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.hotels.com/ontologies/hotel_domain.owl">
+    <Prefix name="" IRI="http://www.hotels.com/ontologies/hotel_domain.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">This hotel domain ontology describes various types of hotels with its attributes</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AccountsManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdjoiningRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Advertising"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirportLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AssistenceManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bakery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BanquetFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BarFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BedAndBreakfastClientele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Billing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusinessAndCommercialClientele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CabanaRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarRental"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CasinoClientele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CateringService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChiefManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CleaningStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coffeeshops"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CollectingPayments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComputerFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConferenceAndMeetingFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConferenceCenterClientele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocterOnCall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DoubleRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DowntownLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DuplexRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmployeeWelfare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Engineering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExecutiveHouseKeeper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilyRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilyRoomWithBalcony"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilySuitWithSeaVIew"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinancialControlDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinancialStatements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FiveStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlotelLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodAndBeragerManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FourStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FranchiseOwnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrontOffice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrontOfficeManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeneralManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GuestRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HRAndTrainingDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthClubFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HospitilityRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HouseKeeping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndependentOwnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InventoryControl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Invoices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IroningService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kitchen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Labourer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LargeSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LaundryService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocationBasedHotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LuggageStorageFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MailService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maintainance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManagementContractOwnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OneStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Owner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParkingFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalRelations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProprietaryOwnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PurchaseDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recruitment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResidentialClientele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResortLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resturants"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResurantFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomsDivisionDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SalesAndMarketingManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecurityDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SingleRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeBasedHotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StaffMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StarBasedHotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StudioRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubUrbanLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Suits"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Supervisor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SwimmingPoolFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThreeStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimeShareOwnership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Training"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TwinRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TwoStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VeryLargeSize"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDepartment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGuestRoom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStaffMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFacilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGuestRoomOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isServiceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberOfRooms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#role"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#starRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CinnamonRedColombo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GaladariHotel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GaladariHotelFoodAndBeverageDepartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KamalPrasad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SamanRathnayake"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AccountsManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>AccountsManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AssistenceManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>AssistanceManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Chef"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>Chef</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChiefManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>ChiefManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CleaningStaff"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>CleaningManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ExecutiveHouseKeeper"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>ExecutiveHouseKeeper</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FiveStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StarBasedHotel"/>
+            <DataHasValue>
+                <DataProperty IRI="#starRate"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FoodAndBeragerManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>FoodAndBeverageManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FourStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StarBasedHotel"/>
+            <DataHasValue>
+                <DataProperty IRI="#starRate"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FrontOfficeManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>FrontOfficeManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GeneralManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>GeneralManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Labourer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>Labourer</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LargeSize"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SizeBasedHotel"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#numberOfRooms"/>
+                <DataIntersectionOf>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataIntersectionOf>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MediumSize"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SizeBasedHotel"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#numberOfRooms"/>
+                <DataIntersectionOf>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataIntersectionOf>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OneStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StarBasedHotel"/>
+            <DataHasValue>
+                <DataProperty IRI="#starRate"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Owner"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>Owner</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SalesAndMarketingManager"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>SalesAndMarketingManager</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SmallSize"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SizeBasedHotel"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#numberOfRooms"/>
+                <DataIntersectionOf>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataIntersectionOf>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Supervisor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StaffMember"/>
+            <DataHasValue>
+                <DataProperty IRI="#role"/>
+                <Literal>Supervisor</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ThreeStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StarBasedHotel"/>
+            <DataHasValue>
+                <DataProperty IRI="#starRate"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TwoStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#StarBasedHotel"/>
+            <DataHasValue>
+                <DataProperty IRI="#starRate"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VeryLargeSize"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SizeBasedHotel"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#numberOfRooms"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AdjoiningRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Advertising"/>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirportLocation"/>
+        <Class IRI="#LocationBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bakery"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BanquetFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BarFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bars"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BedAndBreakfastClientele"/>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Billing"/>
+        <Class IRI="#FinancialControlDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusinessAndCommercialClientele"/>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CabanaRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarRental"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CasinoClientele"/>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CateringService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClienteleBasedHotel"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coffeeshops"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectingPayments"/>
+        <Class IRI="#FinancialControlDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComputerFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConferenceAndMeetingFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConferenceCenterClientele"/>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocterOnCall"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DoubleRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DowntownLocation"/>
+        <Class IRI="#LocationBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DuplexRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmployeeWelfare"/>
+        <Class IRI="#HRAndTrainingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engineering"/>
+        <Class IRI="#RoomsDivisionDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilyRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilyRoomWithBalcony"/>
+        <Class IRI="#FamilyRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilySuitWithSeaVIew"/>
+        <Class IRI="#FamilyRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinancialControlDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinancialStatements"/>
+        <Class IRI="#FinancialControlDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlotelLocation"/>
+        <Class IRI="#LocationBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FranchiseOwnership"/>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrontOffice"/>
+        <Class IRI="#RoomsDivisionDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GuestRoom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isGuestRoomOf"/>
+            <Class IRI="#Hotel"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HRAndTrainingDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthClubFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HospitilityRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HouseKeeping"/>
+        <Class IRI="#RoomsDivisionDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndependentOwnership"/>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InventoryControl"/>
+        <Class IRI="#FinancialControlDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Invoices"/>
+        <Class IRI="#FinancialControlDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IroningService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchen"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LaundryService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocationBasedHotel"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LuggageStorageFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MailService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Maintainance"/>
+        <Class IRI="#RoomsDivisionDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementContractOwnership"/>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orientation"/>
+        <Class IRI="#HRAndTrainingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OwnershipBasedHotel"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParkingFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalRelations"/>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procurement"/>
+        <Class IRI="#PurchaseDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProprietaryOwnership"/>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PurchaseDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recruitment"/>
+        <Class IRI="#HRAndTrainingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialClientele"/>
+        <Class IRI="#ClienteleBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResortLocation"/>
+        <Class IRI="#LocationBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resturants"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResurantFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoomService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoomsDivisionDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sales"/>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityDepartment"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SingleRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeBasedHotel"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StarBasedHotel"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudioRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubUrbanLocation"/>
+        <Class IRI="#LocationBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Suits"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SwimmingPoolFacility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimeShareOwnership"/>
+        <Class IRI="#OwnershipBasedHotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Training"/>
+        <Class IRI="#HRAndTrainingDepartment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TwinRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AccountsManager"/>
+        <Class IRI="#AssistenceManager"/>
+        <Class IRI="#Chef"/>
+        <Class IRI="#ChiefManager"/>
+        <Class IRI="#CleaningStaff"/>
+        <Class IRI="#ExecutiveHouseKeeper"/>
+        <Class IRI="#FoodAndBeragerManager"/>
+        <Class IRI="#FrontOfficeManager"/>
+        <Class IRI="#GeneralManager"/>
+        <Class IRI="#Labourer"/>
+        <Class IRI="#SalesAndMarketingManager"/>
+        <Class IRI="#Supervisor"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AdjoiningRoom"/>
+        <Class IRI="#CabanaRoom"/>
+        <Class IRI="#DoubleRoom"/>
+        <Class IRI="#DuplexRoom"/>
+        <Class IRI="#FamilyRoom"/>
+        <Class IRI="#HospitilityRoom"/>
+        <Class IRI="#SingleRoom"/>
+        <Class IRI="#StudioRoom"/>
+        <Class IRI="#Suits"/>
+        <Class IRI="#TwinRoom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Advertising"/>
+        <Class IRI="#PersonalRelations"/>
+        <Class IRI="#Sales"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AirportLocation"/>
+        <Class IRI="#DowntownLocation"/>
+        <Class IRI="#FlotelLocation"/>
+        <Class IRI="#ResortLocation"/>
+        <Class IRI="#SubUrbanLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bakery"/>
+        <Class IRI="#Bars"/>
+        <Class IRI="#Coffeeshops"/>
+        <Class IRI="#Kitchen"/>
+        <Class IRI="#Resturants"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BanquetFacility"/>
+        <Class IRI="#BarFacility"/>
+        <Class IRI="#ComputerFacility"/>
+        <Class IRI="#ConferenceAndMeetingFacility"/>
+        <Class IRI="#HealthClubFacility"/>
+        <Class IRI="#InternetFacility"/>
+        <Class IRI="#LuggageStorageFacility"/>
+        <Class IRI="#ParkingFacility"/>
+        <Class IRI="#ResurantFacility"/>
+        <Class IRI="#SwimmingPoolFacility"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Billing"/>
+        <Class IRI="#CollectingPayments"/>
+        <Class IRI="#FinancialStatements"/>
+        <Class IRI="#InventoryControl"/>
+        <Class IRI="#Invoices"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CarRental"/>
+        <Class IRI="#CateringService"/>
+        <Class IRI="#DocterOnCall"/>
+        <Class IRI="#IroningService"/>
+        <Class IRI="#LaundryService"/>
+        <Class IRI="#MailService"/>
+        <Class IRI="#RoomService"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Department"/>
+        <Class IRI="#Facility"/>
+        <Class IRI="#GuestRoom"/>
+        <Class IRI="#Hotel"/>
+        <Class IRI="#Service"/>
+        <Class IRI="#StaffMember"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EmployeeWelfare"/>
+        <Class IRI="#Orientation"/>
+        <Class IRI="#Recruitment"/>
+        <Class IRI="#Training"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Engineering"/>
+        <Class IRI="#FrontOffice"/>
+        <Class IRI="#HouseKeeping"/>
+        <Class IRI="#Maintainance"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FinancialControlDepartment"/>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+        <Class IRI="#HRAndTrainingDepartment"/>
+        <Class IRI="#PurchaseDepartment"/>
+        <Class IRI="#RoomsDivisionDepartment"/>
+        <Class IRI="#SalesAndMarketingDepartment"/>
+        <Class IRI="#SecurityDepartment"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FranchiseOwnership"/>
+        <Class IRI="#IndependentOwnership"/>
+        <Class IRI="#ManagementContractOwnership"/>
+        <Class IRI="#ProprietaryOwnership"/>
+        <Class IRI="#TimeShareOwnership"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LargeSize"/>
+        <Class IRI="#MediumSize"/>
+        <Class IRI="#SmallSize"/>
+        <Class IRI="#VeryLargeSize"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#CinnamonRedColombo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FoodAndBeveragesDepartment"/>
+        <NamedIndividual IRI="#GaladariHotelFoodAndBeverageDepartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StaffMember"/>
+        <NamedIndividual IRI="#KamalPrasad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StaffMember"/>
+        <NamedIndividual IRI="#SamanRathnayake"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+        <NamedIndividual IRI="#GaladariHotelFoodAndBeverageDepartment"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+        <NamedIndividual IRI="#KamalPrasad"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAt"/>
+        <NamedIndividual IRI="#KamalPrasad"/>
+        <NamedIndividual IRI="#GaladariHotelFoodAndBeverageDepartment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+        <NamedIndividual IRI="#SamanRathnayake"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfRooms"/>
+        <NamedIndividual IRI="#CinnamonRedColombo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#starRate"/>
+        <NamedIndividual IRI="#CinnamonRedColombo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfRooms"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#starRate"/>
+        <NamedIndividual IRI="#GaladariHotel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#role"/>
+        <NamedIndividual IRI="#KamalPrasad"/>
+        <Literal>Chef</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#role"/>
+        <NamedIndividual IRI="#SamanRathnayake"/>
+        <Literal>Owner</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDepartment"/>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFacility"/>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGuestRoom"/>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasService"/>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStaffMember"/>
+        <ObjectProperty IRI="#hasSubCategory"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFacilityOf"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isGuestRoomOf"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isServiceOf"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDepartment"/>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFacility"/>
+        <ObjectProperty IRI="#isFacilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasGuestRoom"/>
+        <ObjectProperty IRI="#isGuestRoomOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasService"/>
+        <ObjectProperty IRI="#isServiceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasStaffMember"/>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSubCategory"/>
+        <ObjectProperty IRI="#isSubCategoryOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isFacilityOf"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFacility"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDepartment"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFacility"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGuestRoom"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasService"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStaffMember"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFacilityOf"/>
+        <Class IRI="#Facility"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGuestRoomOf"/>
+        <Class IRI="#GuestRoom"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isServiceOf"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+        <Class IRI="#StaffMember"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#StaffMember"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDepartment"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFacility"/>
+        <Class IRI="#Facility"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGuestRoom"/>
+        <Class IRI="#GuestRoom"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasService"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStaffMember"/>
+        <Class IRI="#StaffMember"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFacilityOf"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGuestRoomOf"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isServiceOf"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isStaffMemberOf"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#numberOfRooms"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#role"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#starRate"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfRooms"/>
+        <Class IRI="#SizeBasedHotel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#role"/>
+        <Class IRI="#StaffMember"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#starRate"/>
+        <Class IRI="#StarBasedHotel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfRooms"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#role"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#starRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClienteleBasedHotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The hotel can be classified into the following categories on the basis of its clients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Department</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Hotel has several departments function, to coordinate and interact for a smooth day to day operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Facility</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Facilities are buildings, pieces of equipment, that are provided for a particular purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FinancialControlDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">It is also called the control department, the financial control department is headed by the financial controller, who is responsible for ratifying all the inventory items of the operational departments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FoodAndBeveragesDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The food and beverage (F&amp;B) department include restaurants, bars, coffee shops, banquets, room service, kitchen, and bakery. The department is headed by the F&amp;B director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GuestRoom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A hotel sells a combination of accommodation, food, drinks, and other services and facilities to its guests. The main accommodation product is the room, which is among the principal source for the hotel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HRAndTrainingDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The human resource (HR) department or the personnel department, as it used to be called earlier – is headed by the human resource manager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The place an establishment providing accommodation, meals, and other services for travellers and tourists.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LocationBasedHotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The location of the hotel is one of the major criteria for the traveler to select and patronize a hotel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OwnershipBasedHotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">On the basis of ownership of a hotel, they may be classified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PurchaseDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The purchasing department is led by the purchase manager, who, in some properties, may report to the financial controller.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RoomsDivisionDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">In a large hotel, the housekeeping, front office, and maintenance departments come under room division. These departments together are responsible for maintaining and selling the room in a hotel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SalesAndMarketingDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The sales and marketing department is headed by the sales and marketing manager. A large hotel may have three or more employees in this department, whereas a small hotel can do with just one employee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SecurityDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">It is headed by the chief security officers, the security department is responsible for safeguarding the assets, guests, and employees of the hotel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Hotel services, their number and the amount of people engaged in them depends on the size of the hotel as well as on its status.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SizeBasedHotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The number of guest rooms in a hotel is a criterion to classify hotels. Hotels can be grouped into the following categories on the basis of the number of rooms or the size of the hotel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StaffMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">IT means company’s distribution of responsibilities and authority among its management staff and employees</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StarBasedHotel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">The star classification system is among the most widely accepted rating of hotels worldwide. Rating of hotels in different countries is done by the government or quasi-government sources, independent rating agencies, or sometimes the hotel operators themselves.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Hotel Domain Ontology</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
